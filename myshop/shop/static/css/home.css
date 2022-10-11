@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+html, body {
+    margin:0;
+    padding: 0;
+    text-align: center;
+}
+h2 {
+    font-style: italic;
+}
+
+* {
+    font-family: 'Readex Pro',sans-serif;
+}
+
+.home_page {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.65) 0%,
+        rgba(0,0,0,0) 100%),
+        url("../images/flag.png");
+    background-size: cover;
+}
+.warning_page {
+    width: 100vw;
+    height: 100vh;
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.65) 0%,
+        rgba(0,0,0,0) 100%),
+        url("../images/happy.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.logo-container {
+    width: 160px;
+    height: 160px;
+}
+.logo {
+    width: 100%;
+    height: 100%;
+}
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.primary-title-container {
+    width: 90%;
+    justify-content: center;
+    margin-top: 20vh;
+}
+.primary-title {
+    height: 100%;
+    font-size: 70px;
+    width: 100%;
+    color: rgb(255,255,255);
+}
+.primary-button {
+    position: fixed;
+    bottom: 20%;
+    left: 45%;
+    color: #fff;
+    text-transform: uppercase;
+    background: linear-gradient(45deg,rgb(254,48,114),rgb(255,89,64));
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    box-shadow: 0 2px 3px 0px rgba(0,0,0,0.25);
+    transition: .2s all;
+}
+.primary-button:hover {
+    transform: scale(1.2);
+}
+
+@media only screen and (max-width:960px) {
+    .primary-title {
+        font-size: 50px;
+    }
+
+}
+@media only screen and (max-width:800px) {
+    .logo-container {
+        width:150px;
+        height: 150px;
+    }
+    .primary-button {
+        bottom: 20%;
+        left: 30%;
+    }
+}
