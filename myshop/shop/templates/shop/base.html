@@ -11,13 +11,22 @@
     </head>
     <body>
         <div id="header">
-            <a href="/" class="logo">North korea</a>
-            <a class="shopping-cart-logo">
-                <h3>
-                    <i class="fa fa-shopping-cart"></i>
-                    10.00
+            <a href="{% url 'shop:product_list'%}" class="logo">North korea</a>
+            {% with total_items=cart|length %}
+                {% if total_items > 0%}
+
+                <a class="shopping-cart-logo" href="{% url 'cart:cart_detail' %}">
+                    <h3>
+                        <i class="fa fa-shopping-cart"></i>
+                        {{total_items}} item{{total_items|pluralize}}, ${{cart.get_total_price}}
+                    </h3>
+                </a>
+                {% else %}
+                <h3 class="shopping-cart-logo">
+                    Your cart is empty
                 </h3>
-            </a>
+                {% endif %}
+            {% endwith %}
         </div>
         <div id="content">
             {% block content %}
